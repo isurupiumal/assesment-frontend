@@ -16,7 +16,6 @@ export class ProductComponent {
     sortField: string;
     id:number = -1;
     quantity: string;
-    quan:number = 0;
     price:number = 0;
     selectedProduct:string = '';
 
