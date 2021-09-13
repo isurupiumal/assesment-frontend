@@ -67,6 +67,11 @@
     border-radius: 4px;
     margin-bottom: 2rem;
 }
+
+.calculate{
+    display: inline-block;
+} 
+
 @media screen and (max-width: 576px) {
     :host ::ng-deep .product-list-item {
         flex-direction: column;
