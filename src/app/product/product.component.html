@@ -16,7 +16,7 @@
                 <div class="product-list-item">
                     <div class="product-list-detail">
                         <div class="product-name">{{product.name}}</div>
-                        <div class="product-description">Units Per Carton -  {{product.unitPerCarton}}</div>
+                        <div class="product-description">Units Per Carton - {{product.unitPerCarton}}</div>
                     </div>
                     <div class="product-list-action">
                         <span class="product-price">Carton Price ${{product.cartonPrice}}</span>
@@ -44,18 +44,25 @@
             </div>
         </ng-template>
     </p-dataView>
+</div>
+
+<div class="card" *ngIf="id != -1">
+    <div class="p-grid">
+        <div class="p-col-3">
+            <label>{{selectedProduct}}</label>
+        </div>
+        <div class="p-col-3">
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText [(ngModel)]="quantity"  pattern="[0-9]*">
+                <label for="float-input">Quantity</label>
+            </span>
+        </div>
+        <div class="p-col-3">
+            <p-button label="Calculate" (click)="calculate()"></p-button>
+        </div>
+        <div class="p-col-3">
+            <label>{{price}}</label>
+        </div>
     </div>
-    <div class="card"*ngIf="id != -1">
-        
-        <div class="calculate">
-            <label >{{selectedProduct}}</label>
-        <span class="p-float-label">
-            <input id="float-input" type="text" pInputText [(ngModel)]="quantity"> 
-            <label for="float-input">Quantity</label>
-        </span>
-        <p-button label="Calculate" (click)="calculate()"></p-button>
-        <label >{{price}}</label>
-    </div>
-        
-    
-    </div>
+
+</div>
